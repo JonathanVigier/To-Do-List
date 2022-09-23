@@ -1,0 +1,78 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(252, 216, 118);
+}
+h1 {
+    text-shadow: 2px 2px 2px rgb(255, 171, 75);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 171, 75);
+    min-width: 300px;
+    min-height: 200px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+form label {
+    margin: 0 0 25px 0;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+form input {
+    background: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: black;
+}
+form input::placeholder {
+    color: rgb(34, 34, 34);
+}
+form input:focus-visible {
+    outline: none;
+}
+form ul {
+    padding: 0;
+    align-self: start;
+}
+form li {
+    position: relative;
+    margin: 10px 10px 10px 20px;
+    align-self: start;
+    list-style-type: none;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+form li::before {
+    position: absolute;
+    top: 3px;
+    left: -15px;
+    content: "✗";
+    font-size: 0.8rem;
+    color: rgb(255, 65, 40);
+    text-shadow: 1px 1px 1px black;
+}
+
+li.finished {
+    text-decoration: line-through;
+}
+li.finished::before {
+    position: absolute;
+    top: 3px;
+    left: -15px;
+    content: "✓";
+    font-size: 0.8rem;
+    color: rgb(90, 255, 40);
+    text-shadow: 1px 1px 1px black;
+}
